@@ -1,0 +1,42 @@
+<!-- 
+
+
+<div class="container" style="margin-top: 70px;">
+    <div class="row">
+      <div class="col">
+          <div class="input-group mb-3">
+              <input type="text" class="form-control" ngModel name="input" #input aria-label="Sizing example input" placeholder="User" aria-describedby="inputGroup-sizing-default">
+            </div>
+      </div>  
+      <div class="col">
+          <button type="button" class="btn btn-primary" (click)="join(input.value)">join</button>
+      </div>  
+    </div>
+    <div style="float:right;">
+       <h2>Available Users</h2>
+        <ul class="list-group list-group-flush">
+            <a ><li class="list-group-item" *ngFor="let user of connectedUsers" (click)="clickedUser(user)">{{user.name}}</li></a> 
+          </ul>
+    </div>
+<div class="card" style="width: 40rem;" *ngIf="openChat">
+    <div class="card-body">
+      <div style="overflow-y:auto; height: 400px;">
+        <h4>Messages</h4>
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let sentMessage of sendingUserInfo">{{sentMessage.from}} :{{sentMessage.message}} </li>
+            <li class="list-group-item" *ngFor="let message of messages">{{message.from}} :{{message.message}} </li>
+          </ul>
+      </div>
+      <div class="row">
+        <div class="col">
+          <input type="text" class="form-control" ngModel name="text" #text  placeholder="Enter ur message">
+        </div>
+        <div class="col">
+          <button type="button" class="btn btn-outline-success" (click)="send(text.value)" >send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div> -->
+
+  <app-group-chat></app-group-chat>
